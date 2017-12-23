@@ -207,6 +207,8 @@ GEM
       thor (>= 0.18.1, < 2.0)
     raindrops (0.16.0)
     rake (11.3.0)
+    rollbar (2.15.5)
+      multi_json
     rspec-activemodel-mocks (1.0.3)
       activemodel (>= 3.0)
       activesupport (>= 3.0)
@@ -317,6 +319,7 @@ DEPENDENCIES
   quiet_assets
   rails (= 4.2.9)
   rails_12factor
+  rollbar
   rspec-activemodel-mocks
   rspec-rails
   sass-rails (~> 5.0.0)
