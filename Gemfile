@@ -50,6 +50,7 @@ gem 'opml', git: 'https://github.com/fastladder/opml'
 gem 'rollbar'
 gem 'sass-rails', '~> 5.0.0'
 gem 'settingslogic'
+gem 'therubyracer', platforms: :ruby
 gem 'uglifier', '>= 1.3.0'
 
 if ENV['NEW_RELIC_LICENSE_KEY']
