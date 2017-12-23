@@ -97,11 +97,13 @@ module Fastladder
       begin
         run_body
       rescue TimeoutError
+        Rollbar.error $!
         @logger.error "Time out: #{$!}"
       rescue Interrupt
         @logger.warn "\n=> #{$!.message} trapped. Terminating..."
         return true
       rescue Exception
+        Rollbar.error $!
         @logger.error %!Crawler error: #{$!.message}\n#{$!.backtrace.join("\n")}!
       ensure
         if @crawl_status
