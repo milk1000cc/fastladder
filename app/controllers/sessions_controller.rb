@@ -1,5 +1,7 @@
 # This controller handles the login/logout function of the site.
 class SessionsController < ApplicationController
+  skip_before_action :verify_authenticity_token, only: :create
+
   def new
     redirect_to sign_up_path if Member.count == 0
   end
